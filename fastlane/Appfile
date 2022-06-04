@@ -4,3 +4,7 @@
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile
+
+app_identifier("gokhandidin.AppcentNewsApp")
+apple_id("gokhandidin@outlook.com")
+team_id("3WPTWPU2W5")

@@ -17,7 +17,21 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  lane :register_app do
+    produce(
+	username: "gokhandidin@outlook.com",
+	app_identifier: "gokhandidin.AppcentNewsApp",
+	app_name: "AppcentNewsApp"
+    )
   end
+
+  lane :get_dev_certs do
+    cert(
+	development: true
+    )
+    sigh(
+	development: true
+    )
+  end
+
 end
