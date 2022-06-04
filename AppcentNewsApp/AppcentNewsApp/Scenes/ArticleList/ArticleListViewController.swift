@@ -38,6 +38,8 @@ final class ArticleListViewController: BaseViewController {
     private func setup() {
         registerNibs()
         setDelegates()
+        initTableView()
+        initSearchBar()
     }
     
     private func registerNibs() {
@@ -49,6 +51,14 @@ final class ArticleListViewController: BaseViewController {
         tableViewArticle.dataSource = self
         tableViewArticle.delegate = self
         searchBar.delegate = self
+    }
+    
+    private func initTableView() {
+        tableViewArticle.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
+    }
+    
+    private func initSearchBar() {
+        searchBar.placeholder = LanguageManager.shared.search
     }
     
     // MARK: - Methods

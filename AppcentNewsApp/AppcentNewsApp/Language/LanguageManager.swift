@@ -17,6 +17,7 @@ final class LanguageManager {
     
     // MARK: - General
     var loadMore: String = GeneralLocalize.loadMore.rawValue.localized(LanguageObject.locale)
+    var search: String = GeneralLocalize.search.rawValue.localized(LanguageObject.locale)
 }
 
 enum TabBarLocalize: String {
@@ -26,4 +27,5 @@ enum TabBarLocalize: String {
 
 enum GeneralLocalize: String {
     case loadMore
+    case search
 }
