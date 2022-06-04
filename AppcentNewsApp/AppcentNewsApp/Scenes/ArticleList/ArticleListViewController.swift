@@ -102,7 +102,9 @@ extension ArticleListViewController: ArticleListViewModelDelegate {
             print("isLoading \(isLoading)")
         case .showArticleList(let articles):
             articleList = articles
-            showArticle()
+            DispatchQueue.main.async {
+                self.showArticle()
+            }
         }
     }
     

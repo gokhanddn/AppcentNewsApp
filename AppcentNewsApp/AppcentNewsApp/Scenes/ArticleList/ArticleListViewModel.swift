@@ -39,22 +39,20 @@ final class ArticleListViewModel: ArticleListViewModelProtocol {
         
         service.getSearchResultList(parameters: params) { [weak self] resp in
             guard let self = self else { return }
-            DispatchQueue.main.async {
-                
-                self.notify(.setLoading(false))
-                
-                if let resp = resp {
-                   if let articles = resp.articles {
-                       self.totalResult = resp.totalResults ?? 0
-                       self.articleList.append(contentsOf: articles)
-                   }
-                } else {
-                    self.totalResult = self.articleList.count
-                }
-                
-                let presenatations = self.articleList.map({ ArticlePresentation(newsModel: $0) })
-                self.notify(.showArticleList(presenatations))
+            
+            self.notify(.setLoading(false))
+            
+            if let resp = resp {
+               if let articles = resp.articles {
+                   self.totalResult = resp.totalResults ?? 0
+                   self.articleList.append(contentsOf: articles)
+               }
+            } else {
+                self.totalResult = self.articleList.count
             }
+            
+            let presenatations = self.articleList.map({ ArticlePresentation(newsModel: $0) })
+            self.notify(.showArticleList(presenatations))
         }
     }
     
