@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import AppcentNewsAppService
 
 let app = AppContainer()
 
 final class AppContainer {
     
     let router = AppRouter()
+    let searchService = SearchService()
 }

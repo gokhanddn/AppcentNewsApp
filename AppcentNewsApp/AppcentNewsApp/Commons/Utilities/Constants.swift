@@ -14,4 +14,16 @@ final class Constants {
         static let englishLocalization = "en";
         static let turkishLocalization = "tr";
     }
+    
+    // MARK: - ReuseIdentifiers
+    struct ReuseIdentifiers {
+        static let articleCell = "ArticleCell"
+        static let loadingMore = "LoadingMoreFooterView"
+    }
+    
+    // MARK: - ParameterKeys
+    struct ParameterKeys {
+        static let query = "q"
+        static let page = "page"
+    }
 }

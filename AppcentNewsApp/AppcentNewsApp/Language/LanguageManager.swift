@@ -11,12 +11,19 @@ final class LanguageManager {
     
     static let shared = LanguageManager()
     
-    //MARK: - TabBar
+    // MARK: - TabBar
     var news: String = TabBarLocalize.news.rawValue.localized(LanguageObject.locale)
     var favorites: String = TabBarLocalize.favorites.rawValue.localized(LanguageObject.locale)
+    
+    // MARK: - General
+    var loadMore: String = GeneralLocalize.loadMore.rawValue.localized(LanguageObject.locale)
 }
 
 enum TabBarLocalize: String {
     case news
     case favorites
+}
+
+enum GeneralLocalize: String {
+    case loadMore
 }

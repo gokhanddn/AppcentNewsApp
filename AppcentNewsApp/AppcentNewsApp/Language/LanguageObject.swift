@@ -9,5 +9,5 @@ import UIKit
 
 final class LanguageObject {
     static var isEnglish: Bool = true
-    static var locale: String = Constants.Keys.englishLocalization
+    static var locale: String = Constants.Keys.turkishLocalization
 }

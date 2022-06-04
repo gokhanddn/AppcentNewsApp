@@ -34,6 +34,17 @@
 		C0E53712284C04D600E93762 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53711284C04D600E93762 /* StringExtensions.swift */; };
 		C0E53715284C056300E93762 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53714284C056300E93762 /* Constants.swift */; };
 		C0E53717284C06E900E93762 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53716284C06E900E93762 /* BaseViewController.swift */; };
+		C0E53724284C07A700E93762 /* ArticleListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53723284C07A700E93762 /* ArticleListContracts.swift */; };
+		C0E53727284C085000E93762 /* ArticlePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53726284C085000E93762 /* ArticlePresentation.swift */; };
+		C0E53729284C087500E93762 /* ArticlePresentation+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53728284C087500E93762 /* ArticlePresentation+Model.swift */; };
+		C0E5372B284C08F500E93762 /* ArticleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5372A284C08F500E93762 /* ArticleBuilder.swift */; };
+		C0E5372D284C092A00E93762 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5372C284C092A00E93762 /* ArticleListViewController.swift */; };
+		C0E5372F284C093500E93762 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5372E284C093500E93762 /* ArticleListViewModel.swift */; };
+		C0E53731284C094000E93762 /* ArticleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E53730284C094000E93762 /* ArticleList.storyboard */; };
+		C0E53735284C0CAD00E93762 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53733284C0CAD00E93762 /* ArticleCell.swift */; };
+		C0E53736284C0CAD00E93762 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E53734284C0CAD00E93762 /* ArticleCell.xib */; };
+		C0E53738284C0DF400E93762 /* LoadingMoreFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53737284C0DF400E93762 /* LoadingMoreFooterView.swift */; };
+		C0E5373A284C0E3400E93762 /* LoadingMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E53739284C0E3400E93762 /* LoadingMoreFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +160,17 @@
 		C0E53711284C04D600E93762 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C0E53714284C056300E93762 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0E53716284C06E900E93762 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C0E53723284C07A700E93762 /* ArticleListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListContracts.swift; sourceTree = "<group>"; };
+		C0E53726284C085000E93762 /* ArticlePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePresentation.swift; sourceTree = "<group>"; };
+		C0E53728284C087500E93762 /* ArticlePresentation+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticlePresentation+Model.swift"; sourceTree = "<group>"; };
+		C0E5372A284C08F500E93762 /* ArticleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleBuilder.swift; sourceTree = "<group>"; };
+		C0E5372C284C092A00E93762 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		C0E5372E284C093500E93762 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
+		C0E53730284C094000E93762 /* ArticleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleList.storyboard; sourceTree = "<group>"; };
+		C0E53733284C0CAD00E93762 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		C0E53734284C0CAD00E93762 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		C0E53737284C0DF400E93762 /* LoadingMoreFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMoreFooterView.swift; sourceTree = "<group>"; };
+		C0E53739284C0E3400E93762 /* LoadingMoreFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingMoreFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E536F3284BFEA200E93762 /* App */,
+				C0E53732284C0C8B00E93762 /* Cells */,
 				C0E536F8284BFF0C00E93762 /* Scenes */,
 				C0E5370F284C04B000E93762 /* Commons */,
 				C0E536FB284BFFDC00E93762 /* Theme */,
@@ -312,6 +335,7 @@
 			children = (
 				C0E53716284C06E900E93762 /* BaseViewController.swift */,
 				C0E536F9284BFF3300E93762 /* BaseTabBarViewController.swift */,
+				C0E53722284C078600E93762 /* ArticleList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -346,6 +370,7 @@
 		C0E5370F284C04B000E93762 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				C0E53725284C082700E93762 /* Presentations */,
 				C0E53713284C054B00E93762 /* Utilities */,
 				C0E53710284C04BD00E93762 /* Extensions */,
 			);
@@ -366,6 +391,38 @@
 				C0E53714284C056300E93762 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C0E53722284C078600E93762 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				C0E53723284C07A700E93762 /* ArticleListContracts.swift */,
+				C0E5372A284C08F500E93762 /* ArticleBuilder.swift */,
+				C0E5372C284C092A00E93762 /* ArticleListViewController.swift */,
+				C0E5372E284C093500E93762 /* ArticleListViewModel.swift */,
+				C0E53730284C094000E93762 /* ArticleList.storyboard */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		C0E53725284C082700E93762 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				C0E53726284C085000E93762 /* ArticlePresentation.swift */,
+				C0E53728284C087500E93762 /* ArticlePresentation+Model.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		C0E53732284C0C8B00E93762 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C0E53733284C0CAD00E93762 /* ArticleCell.swift */,
+				C0E53734284C0CAD00E93762 /* ArticleCell.xib */,
+				C0E53737284C0DF400E93762 /* LoadingMoreFooterView.swift */,
+				C0E53739284C0E3400E93762 /* LoadingMoreFooterView.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,7 +602,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E536A3284BF5CF00E93762 /* LaunchScreen.storyboard in Resources */,
+				C0E5373A284C0E3400E93762 /* LoadingMoreFooterView.xib in Resources */,
+				C0E53731284C094000E93762 /* ArticleList.storyboard in Resources */,
 				C0E53706284C03C000E93762 /* Localizable.strings in Resources */,
+				C0E53736284C0CAD00E93762 /* ArticleCell.xib in Resources */,
 				C0E536A0284BF5CF00E93762 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,14 +634,22 @@
 				C0E53717284C06E900E93762 /* BaseViewController.swift in Sources */,
 				C0E536F7284BFEC200E93762 /* AppRouter.swift in Sources */,
 				C0E53697284BF5CD00E93762 /* AppDelegate.swift in Sources */,
+				C0E5372F284C093500E93762 /* ArticleListViewModel.swift in Sources */,
 				C0E536FF284C000900E93762 /* ThemeObject.swift in Sources */,
 				C0E53699284BF5CD00E93762 /* SceneDelegate.swift in Sources */,
 				C0E536FD284BFFF500E93762 /* ThemeProtocol.swift in Sources */,
+				C0E53729284C087500E93762 /* ArticlePresentation+Model.swift in Sources */,
+				C0E53735284C0CAD00E93762 /* ArticleCell.swift in Sources */,
 				C0E5370C284C045400E93762 /* LanguageObject.swift in Sources */,
+				C0E53738284C0DF400E93762 /* LoadingMoreFooterView.swift in Sources */,
 				C0E53712284C04D600E93762 /* StringExtensions.swift in Sources */,
+				C0E53724284C07A700E93762 /* ArticleListContracts.swift in Sources */,
 				C0E536FA284BFF3300E93762 /* BaseTabBarViewController.swift in Sources */,
+				C0E5372B284C08F500E93762 /* ArticleBuilder.swift in Sources */,
+				C0E53727284C085000E93762 /* ArticlePresentation.swift in Sources */,
 				C0E53702284C002800E93762 /* LightTheme.swift in Sources */,
 				C0E536F5284BFEB800E93762 /* AppContainer.swift in Sources */,
+				C0E5372D284C092A00E93762 /* ArticleListViewController.swift in Sources */,
 				C0E5370E284C047C00E93762 /* LanguageManager.swift in Sources */,
 				C0E53715284C056300E93762 /* Constants.swift in Sources */,
 			);

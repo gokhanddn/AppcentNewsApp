@@ -6,6 +6,9 @@
   
 */
 
-//MARK: - TabBar
+// MARK: - TabBar
 "news" = "Haberler";
 "favorites" = "Favoriler";
+
+// MARK: - General
+"loadMore" = "Daha fazla";

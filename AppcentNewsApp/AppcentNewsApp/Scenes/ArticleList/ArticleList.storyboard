@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ArticleListViewController" id="Y6W-OH-hqX" customClass="ArticleListViewController" customModule="AppcentNewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-qP-Xgg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="56H-KW-WYC"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GRP-vU-Mlc">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VPL-qP-Xgg" secondAttribute="trailing" id="3eA-zS-tZ6"/>
+                            <constraint firstItem="VPL-qP-Xgg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AZ1-G7-1f3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="GRP-vU-Mlc" secondAttribute="bottom" id="GpC-QB-C9L"/>
+                            <constraint firstItem="GRP-vU-Mlc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Pun-Al-LPg"/>
+                            <constraint firstItem="GRP-vU-Mlc" firstAttribute="top" secondItem="VPL-qP-Xgg" secondAttribute="bottom" id="d08-TA-27I"/>
+                            <constraint firstItem="VPL-qP-Xgg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fvi-qk-AgN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GRP-vU-Mlc" secondAttribute="trailing" id="xyw-Qv-wOp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="VPL-qP-Xgg" id="gEX-aa-dkv"/>
+                        <outlet property="tableViewArticle" destination="GRP-vU-Mlc" id="olg-dD-Ao5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

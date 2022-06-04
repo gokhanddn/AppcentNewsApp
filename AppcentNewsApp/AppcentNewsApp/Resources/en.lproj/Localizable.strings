@@ -6,6 +6,9 @@
   
 */
 
-//MARK: - TabBar
+// MARK: - TabBar
 "news" = "News";
 "favorites" = "Favorites";
+
+// MARK: - General
+"loadMore" = "Load more";
