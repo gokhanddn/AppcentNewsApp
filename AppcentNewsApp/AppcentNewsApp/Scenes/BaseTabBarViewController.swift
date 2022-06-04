@@ -24,8 +24,8 @@ final class BaseTabBarViewController: UITabBarController {
     
     func initViewControllers() {
         viewControllers = [
-            createNavController(for: UIViewController(), title: "News", image: UIImage(systemName: "newspaper")!),
-            createNavController(for: UIViewController(), title: "Favorites", image: UIImage(systemName: "heart")!)
+            createNavController(for: UIViewController(), title: LanguageManager.shared.news, image: UIImage(systemName: "newspaper")!),
+            createNavController(for: UIViewController(), title: LanguageManager.shared.favorites, image: UIImage(systemName: "heart")!)
         ]
     }
     
