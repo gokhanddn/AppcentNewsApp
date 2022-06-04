@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AppcentNewsAppService/AppcentNewsAppService.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AppcentNewsAppModel/AppcentNewsAppModel.xcodeproj">
    </FileRef>
    <FileRef
