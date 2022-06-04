@@ -33,6 +33,7 @@
 		C0E5370E284C047C00E93762 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5370D284C047C00E93762 /* LanguageManager.swift */; };
 		C0E53712284C04D600E93762 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53711284C04D600E93762 /* StringExtensions.swift */; };
 		C0E53715284C056300E93762 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53714284C056300E93762 /* Constants.swift */; };
+		C0E53717284C06E900E93762 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53716284C06E900E93762 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		C0E5370D284C047C00E93762 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		C0E53711284C04D600E93762 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C0E53714284C056300E93762 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C0E53716284C06E900E93762 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 		C0E536F8284BFF0C00E93762 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C0E53716284C06E900E93762 /* BaseViewController.swift */,
 				C0E536F9284BFF3300E93762 /* BaseTabBarViewController.swift */,
 			);
 			path = Scenes;
@@ -568,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E53717284C06E900E93762 /* BaseViewController.swift in Sources */,
 				C0E536F7284BFEC200E93762 /* AppRouter.swift in Sources */,
 				C0E53697284BF5CD00E93762 /* AppDelegate.swift in Sources */,
 				C0E536FF284C000900E93762 /* ThemeObject.swift in Sources */,
