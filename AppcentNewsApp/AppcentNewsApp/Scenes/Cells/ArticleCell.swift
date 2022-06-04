@@ -34,5 +34,6 @@ final class ArticleCell: UITableViewCell {
         labelTitle.text = article.title
         labelDescription.text = article.desc
         imageViewArticle.layer.cornerRadius = 5
+        imageViewArticle.image(from: article.imageUrl, placeHolder: UIImage(named: "no_photo"))
     }
 }

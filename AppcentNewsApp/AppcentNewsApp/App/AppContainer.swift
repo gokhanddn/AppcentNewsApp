@@ -14,4 +14,6 @@ final class AppContainer {
     
     let router = AppRouter()
     let searchService = SearchService()
+    let imageService = ImageService()
+    let imageCacheTimeInterval: TimeInterval = 12 * 60 * 60
 }

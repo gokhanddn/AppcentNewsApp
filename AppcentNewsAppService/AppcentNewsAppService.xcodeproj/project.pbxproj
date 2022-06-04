@@ -21,6 +21,8 @@
 		C0E53683284BF29E00E93762 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53682284BF29E00E93762 /* BaseService.swift */; };
 		C0E53687284BF2C700E93762 /* SearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53686284BF2C700E93762 /* SearchServiceProtocol.swift */; };
 		C0E53689284BF2F000E93762 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53688284BF2F000E93762 /* SearchService.swift */; };
+		C0E5373F284C132300E93762 /* ImageServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5373E284C132300E93762 /* ImageServiceProtocol.swift */; };
+		C0E53741284C133900E93762 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53740284C133900E93762 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		C0E53682284BF29E00E93762 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		C0E53686284BF2C700E93762 /* SearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceProtocol.swift; sourceTree = "<group>"; };
 		C0E53688284BF2F000E93762 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		C0E5373E284C132300E93762 /* ImageServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProtocol.swift; sourceTree = "<group>"; };
+		C0E53740284C133900E93762 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E53686284BF2C700E93762 /* SearchServiceProtocol.swift */,
+				C0E5373E284C132300E93762 /* ImageServiceProtocol.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E53688284BF2F000E93762 /* SearchService.swift */,
+				C0E53740284C133900E93762 /* ImageService.swift */,
 			);
 			path = Concrete;
 			sourceTree = "<group>";
@@ -405,8 +411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E5373F284C132300E93762 /* ImageServiceProtocol.swift in Sources */,
 				C0E53679284BF20D00E93762 /* ApiHost.swift in Sources */,
 				C0E53680284BF25D00E93762 /* DataRequest.swift in Sources */,
+				C0E53741284C133900E93762 /* ImageService.swift in Sources */,
 				C0E53683284BF29E00E93762 /* BaseService.swift in Sources */,
 				C0E5367B284BF21700E93762 /* ApiVersion.swift in Sources */,
 				C0E5367D284BF22000E93762 /* Path.swift in Sources */,
