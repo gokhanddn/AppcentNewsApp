@@ -8,6 +8,8 @@
 import UIKit
 
 final class LanguageObject {
-    static var isEnglish: Bool = true
-    static var locale: String = Constants.Keys.turkishLocalization
+    
+    static var shared = LanguageObject()
+    
+    var locale: String = Constants.Keys.turkishLocalization
 }

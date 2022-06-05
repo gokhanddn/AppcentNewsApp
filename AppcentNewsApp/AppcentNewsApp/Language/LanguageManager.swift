@@ -12,15 +12,15 @@ final class LanguageManager {
     static let shared = LanguageManager()
     
     // MARK: - TabBar
-    var news: String = TabBarLocalize.news.rawValue.localized(LanguageObject.locale)
-    var favorites: String = TabBarLocalize.favorites.rawValue.localized(LanguageObject.locale)
+    var news: String = TabBarLocalize.news.rawValue.localized(LanguageObject.shared.locale)
+    var favorites: String = TabBarLocalize.favorites.rawValue.localized(LanguageObject.shared.locale)
     
     // MARK: - General
-    var loadMore: String = GeneralLocalize.loadMore.rawValue.localized(LanguageObject.locale)
-    var search: String = GeneralLocalize.search.rawValue.localized(LanguageObject.locale)
-    var newsDetail: String = GeneralLocalize.newsDetail.rawValue.localized(LanguageObject.locale)
-    var desc: String = GeneralLocalize.desc.rawValue.localized(LanguageObject.locale)
-    var goSource: String = GeneralLocalize.goSource.rawValue.localized(LanguageObject.locale)
+    var loadMore: String = GeneralLocalize.loadMore.rawValue.localized(LanguageObject.shared.locale)
+    var search: String = GeneralLocalize.search.rawValue.localized(LanguageObject.shared.locale)
+    var newsDetail: String = GeneralLocalize.newsDetail.rawValue.localized(LanguageObject.shared.locale)
+    var desc: String = GeneralLocalize.desc.rawValue.localized(LanguageObject.shared.locale)
+    var goSource: String = GeneralLocalize.goSource.rawValue.localized(LanguageObject.shared.locale)
 }
 
 enum TabBarLocalize: String {

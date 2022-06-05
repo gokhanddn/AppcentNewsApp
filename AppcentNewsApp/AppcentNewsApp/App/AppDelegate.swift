@@ -8,12 +8,14 @@
 import UIKit
 import CoreData
 import FirebaseCore
+import FirebaseRemoteConfig
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        initRemoteConfig()
         return true
     }
 
@@ -30,7 +32,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    private func initRemoteConfig() {
+        let remoteConfig = RemoteConfig.remoteConfig()
+        
+        let defaults: [String: NSObject] = ["exampleParameter": "" as NSObject]
+        
+        remoteConfig.setDefaults(defaults)
+        let settings = RemoteConfigSettings()
+        settings.minimumFetchInterval = 0
+        remoteConfig.configSettings = settings
+        
+        remoteConfig.fetch(withExpirationDuration: 0) { configStatus, error in
+            if configStatus == .success, error == nil {
+                remoteConfig.activate { isSuccess, error in
+                    guard error == nil else { return }
+                    let value = remoteConfig.configValue(forKey: "exampleParameter").stringValue
+                    print("remoteConfig.configValue \(value ?? "-")")
+                }
+            } else {
+                print("An error occured")
+            }
+        }
+    }
+    
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
         /*
