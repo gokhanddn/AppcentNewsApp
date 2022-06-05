@@ -27,7 +27,7 @@ final class ArticleDetailViewController: BaseViewController {
     }
     
     /// Variables
-    var ArticleDetail: ArticleDetailPresentation?
+    var articleDetail: ArticleDetailPresentation?
     
     // MARK: - Life cycle methods
     override func viewDidLoad() {
@@ -35,6 +35,7 @@ final class ArticleDetailViewController: BaseViewController {
         setup()
     }
     
+    // MARK: - Setup & Initializers
     private func setup() {
         initView()
     }
@@ -50,7 +51,7 @@ final class ArticleDetailViewController: BaseViewController {
     
     // MARK: - Methods
     private func updateUI(_ presentation: ArticleDetailPresentation) {
-        ArticleDetail = presentation
+        articleDetail = presentation
         
         labelTitle.text = presentation.title
         labelAuthor.text = presentation.author
@@ -58,6 +59,11 @@ final class ArticleDetailViewController: BaseViewController {
         labelDescription.text = presentation.desc
         labelContent.text = presentation.content
         imageViewNews.image(from: presentation.imageUrl, placeHolder: nil)
+    }
+    
+    // MARK: - IBActions
+    @IBAction private func buttonShareAction(_ sender: UIButton) {
+        share(title: articleDetail?.title ?? String(), sourceUrl: articleDetail?.sourceUrl ?? String())
     }
 }
 

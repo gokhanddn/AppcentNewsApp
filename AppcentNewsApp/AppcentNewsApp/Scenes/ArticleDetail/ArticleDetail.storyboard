@@ -175,6 +175,9 @@
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                                <connections>
+                                                    <action selector="buttonShareAction:" destination="DZv-wC-NsN" eventType="touchUpInside" id="fUU-Ej-hkd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoL-gh-iYu">
                                                 <rect key="frame" x="80" y="0.0" width="302" height="43"/>
