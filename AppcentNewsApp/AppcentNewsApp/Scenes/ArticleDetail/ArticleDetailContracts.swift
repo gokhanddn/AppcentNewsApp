@@ -9,6 +9,7 @@ import Foundation
 
 protocol ArticleDetailViewModelDelegate: AnyObject {
     func handleViewModelOutput(_ output: ArticleDetailViewModelOutput)
+    func navigate(to route: ArticleDetailViewRoute)
 }
 
 enum ArticleDetailViewModelOutput: Equatable {
@@ -17,9 +18,14 @@ enum ArticleDetailViewModelOutput: Equatable {
     case updatedFavorite(Bool)
 }
 
+enum ArticleDetailViewRoute {
+    case detail(String)
+}
+
 protocol ArticleDetailViewModelProtocol {
     var delegate: ArticleDetailViewModelDelegate? { get set }
     func load()
     func addOrRemoveFavorite()
     func isFavorite() -> Bool
+    func goToSource()
 }

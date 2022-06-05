@@ -51,6 +51,10 @@ final class ArticleDetailViewModel: ArticleDetailViewModelProtocol {
         }
     }
     
+    func goToSource() {
+        delegate?.navigate(to: .detail(article.sourceUrl))
+    }
+    
     // MARK: Private Methods
     private func addToFavorites() {
         let favoriteArticle = FavoriteArticle(context: context)

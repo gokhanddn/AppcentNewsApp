@@ -20,6 +20,7 @@ final class LanguageManager {
     var search: String = GeneralLocalize.search.rawValue.localized(LanguageObject.locale)
     var newsDetail: String = GeneralLocalize.newsDetail.rawValue.localized(LanguageObject.locale)
     var desc: String = GeneralLocalize.desc.rawValue.localized(LanguageObject.locale)
+    var goSource: String = GeneralLocalize.goSource.rawValue.localized(LanguageObject.locale)
 }
 
 enum TabBarLocalize: String {
@@ -32,4 +33,5 @@ enum GeneralLocalize: String {
     case search
     case newsDetail
     case desc
+    case goSource
 }

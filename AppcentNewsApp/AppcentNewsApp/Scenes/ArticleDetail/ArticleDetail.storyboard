@@ -192,6 +192,9 @@
                                                 <state key="normal" title="Go to Source">
                                                     <color key="titleColor" systemColor="systemGray6Color"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonSourceAction:" destination="DZv-wC-NsN" eventType="touchUpInside" id="n91-77-e2u"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -230,6 +233,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonFavorite" destination="abp-Ht-p38" id="8SN-kG-WOF"/>
+                        <outlet property="buttonSource" destination="YoL-gh-iYu" id="eVl-g6-8lS"/>
                         <outlet property="imageViewNews" destination="f7J-JD-rOH" id="8l7-Fl-vLI"/>
                         <outlet property="labelAuthor" destination="GwW-9v-0JP" id="N40-DA-Hyg"/>
                         <outlet property="labelContent" destination="IpE-Ow-q6B" id="kBH-ok-25u"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class ArticleDetailViewController: BaseViewController {
     
@@ -18,6 +19,7 @@ final class ArticleDetailViewController: BaseViewController {
     @IBOutlet private weak var labelContent: UILabel!
     @IBOutlet private weak var imageViewNews: UIImageView!
     @IBOutlet private weak var buttonFavorite: UIButton!
+    @IBOutlet private weak var buttonSource: UIButton!
     
     // MARK: - Properties
     /// View Models
@@ -51,6 +53,7 @@ final class ArticleDetailViewController: BaseViewController {
     
     private func setupLocalizationStrings() {
         labelDescriptionText.text = LanguageManager.shared.desc
+        buttonSource.setTitle(LanguageManager.shared.goSource, for: .normal)
     }
     
     // MARK: - Methods
@@ -73,6 +76,11 @@ final class ArticleDetailViewController: BaseViewController {
         }
     }
     
+    private func goToSource(with urlString: String) {
+        let swiftUIController = UIHostingController(rootView: ArticleSourceView(sourceUrl: urlString))
+        navigationController?.pushViewController(swiftUIController, animated: true)
+    }
+    
     // MARK: - IBActions
     @IBAction private func buttonFavoriteAction(_ sender: UIButton) {
         viewModel?.addOrRemoveFavorite()
@@ -80,6 +88,10 @@ final class ArticleDetailViewController: BaseViewController {
     
     @IBAction private func buttonShareAction(_ sender: UIButton) {
         share(title: articleDetail?.title ?? String(), sourceUrl: articleDetail?.sourceUrl ?? String())
+    }
+    
+    @IBAction private func buttonSourceAction(_ sender: UIButton) {
+        viewModel?.goToSource()
     }
 }
 
@@ -96,6 +108,13 @@ extension ArticleDetailViewController: ArticleDetailViewModelDelegate {
                 isFavorite = !isFavorite
                 updateFavoriteButtonAppearance()
             }
+        }
+    }
+    
+    func navigate(to route: ArticleDetailViewRoute) {
+        switch route {
+        case .detail(let source):
+            goToSource(with: source)
         }
     }
 }
