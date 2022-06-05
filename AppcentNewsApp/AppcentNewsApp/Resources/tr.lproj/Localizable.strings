@@ -13,3 +13,5 @@
 // MARK: - General
 "loadMore" = "Daha fazla";
 "search" = "Ara";
+"newsDetail" = "Haber Detay";
+"desc" = "Açıklama";

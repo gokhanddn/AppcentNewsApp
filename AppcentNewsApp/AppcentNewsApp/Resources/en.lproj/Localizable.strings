@@ -13,3 +13,5 @@
 // MARK: - General
 "loadMore" = "Load more";
 "search" = "Search";
+"newsDetail" = "News Detail";
+"desc" = "Description";

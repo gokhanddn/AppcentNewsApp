@@ -110,8 +110,9 @@ extension ArticleListViewController: ArticleListViewModelDelegate {
     
     func navigate(to route: ArticleListViewRoute) {
         switch route {
-        case .detail:
-            print("detail")
+        case .detail(let articleModel):
+            let viewController = ArticleDetailBuilder.make(with: articleModel)
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }

@@ -57,6 +57,8 @@ final class ArticleListViewModel: ArticleListViewModelProtocol {
     }
     
     func selectArticle(at index: Int) {
+        let article = articleList[index]
+        delegate?.navigate(to: .detail(ArticleDetailPresentation(articleModel: article)))
     }
     
     func isLoadingMoreVisible() -> Bool {

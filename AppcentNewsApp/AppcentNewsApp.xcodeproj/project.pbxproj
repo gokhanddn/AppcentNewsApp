@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0A16B4D284C81970045D0A8 /* ArticleDetailPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A16B4C284C81970045D0A8 /* ArticleDetailPresentation.swift */; };
+		C0A16B56284C81A70045D0A8 /* ArticleDetailPresentation+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A16B55284C81A70045D0A8 /* ArticleDetailPresentation+Model.swift */; };
+		C0A16B63284C8BC20045D0A8 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A16B62284C8BC20045D0A8 /* Util.swift */; };
 		C0E53697284BF5CD00E93762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53696284BF5CD00E93762 /* AppDelegate.swift */; };
 		C0E53699284BF5CD00E93762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53698284BF5CD00E93762 /* SceneDelegate.swift */; };
 		C0E536A0284BF5CF00E93762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E5369F284BF5CF00E93762 /* Assets.xcassets */; };
@@ -137,6 +140,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C0A16B4C284C81970045D0A8 /* ArticleDetailPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPresentation.swift; sourceTree = "<group>"; };
+		C0A16B55284C81A70045D0A8 /* ArticleDetailPresentation+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleDetailPresentation+Model.swift"; sourceTree = "<group>"; };
+		C0A16B62284C8BC20045D0A8 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		C0E53693284BF5CD00E93762 /* AppcentNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppcentNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E53696284BF5CD00E93762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E53698284BF5CD00E93762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -403,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E53714284C056300E93762 /* Constants.swift */,
+				C0A16B62284C8BC20045D0A8 /* Util.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -424,6 +431,8 @@
 			children = (
 				C0E53726284C085000E93762 /* ArticlePresentation.swift */,
 				C0E53728284C087500E93762 /* ArticlePresentation+Model.swift */,
+				C0A16B4C284C81970045D0A8 /* ArticleDetailPresentation.swift */,
+				C0A16B55284C81A70045D0A8 /* ArticleDetailPresentation+Model.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -672,6 +681,7 @@
 				C0E53744284C16AB00E93762 /* ArticleDetailContracts.swift in Sources */,
 				C0E5372F284C093500E93762 /* ArticleListViewModel.swift in Sources */,
 				C0E536FF284C000900E93762 /* ThemeObject.swift in Sources */,
+				C0A16B63284C8BC20045D0A8 /* Util.swift in Sources */,
 				C0E53699284BF5CD00E93762 /* SceneDelegate.swift in Sources */,
 				C0E536FD284BFFF500E93762 /* ThemeProtocol.swift in Sources */,
 				C0E53729284C087500E93762 /* ArticlePresentation+Model.swift in Sources */,
@@ -681,12 +691,14 @@
 				C0E53746284C16BA00E93762 /* ArticleDetailBuilder.swift in Sources */,
 				C0E53738284C0DF400E93762 /* LoadingMoreFooterView.swift in Sources */,
 				C0E53712284C04D600E93762 /* StringExtensions.swift in Sources */,
+				C0A16B56284C81A70045D0A8 /* ArticleDetailPresentation+Model.swift in Sources */,
 				C0E53724284C07A700E93762 /* ArticleListContracts.swift in Sources */,
 				C0E536FA284BFF3300E93762 /* BaseTabBarViewController.swift in Sources */,
 				C0E5372B284C08F500E93762 /* ArticleBuilder.swift in Sources */,
 				C0E53727284C085000E93762 /* ArticlePresentation.swift in Sources */,
 				C0E53702284C002800E93762 /* LightTheme.swift in Sources */,
 				C0E5374A284C16D700E93762 /* ArticleDetailViewModel.swift in Sources */,
+				C0A16B4D284C81970045D0A8 /* ArticleDetailPresentation.swift in Sources */,
 				C0E536F5284BFEB800E93762 /* AppContainer.swift in Sources */,
 				C0E5372D284C092A00E93762 /* ArticleListViewController.swift in Sources */,
 				C0E5370E284C047C00E93762 /* LanguageManager.swift in Sources */,

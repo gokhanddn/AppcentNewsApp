@@ -22,7 +22,7 @@ enum ArticleListViewModelOutput: Equatable {
 }
 
 enum ArticleListViewRoute {
-    case detail
+    case detail(ArticleDetailPresentation)
 }
 
 protocol ArticleListViewModelDelegate: AnyObject {
