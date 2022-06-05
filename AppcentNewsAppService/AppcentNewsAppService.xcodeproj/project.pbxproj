@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D9EF8D284CEF3E00A65B27 /* ParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9EF8C284CEF3E00A65B27 /* ParsingTests.swift */; };
+		C0D9EF95284CEF7900A65B27 /* article.json in Resources */ = {isa = PBXBuildFile; fileRef = C0D9EF94284CEF7900A65B27 /* article.json */; };
 		C0E53644284BF13700E93762 /* AppcentNewsAppService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E5363B284BF13700E93762 /* AppcentNewsAppService.framework */; };
 		C0E53649284BF13700E93762 /* AppcentNewsAppServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E53648284BF13700E93762 /* AppcentNewsAppServiceTests.swift */; };
 		C0E5364A284BF13700E93762 /* AppcentNewsAppService.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E5363E284BF13700E93762 /* AppcentNewsAppService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0D9EF8C284CEF3E00A65B27 /* ParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingTests.swift; sourceTree = "<group>"; };
+		C0D9EF94284CEF7900A65B27 /* article.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = article.json; sourceTree = "<group>"; };
 		C0E5363B284BF13700E93762 /* AppcentNewsAppService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppcentNewsAppService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E5363E284BF13700E93762 /* AppcentNewsAppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppcentNewsAppService.h; sourceTree = "<group>"; };
 		C0E53643284BF13700E93762 /* AppcentNewsAppServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppcentNewsAppServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0D9EF93284CEF5600A65B27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C0D9EF94284CEF7900A65B27 /* article.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C0E53631284BF13700E93762 = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +159,9 @@
 		C0E53647284BF13700E93762 /* AppcentNewsAppServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				C0D9EF93284CEF5600A65B27 /* Resources */,
 				C0E53648284BF13700E93762 /* AppcentNewsAppServiceTests.swift */,
+				C0D9EF8C284CEF3E00A65B27 /* ParsingTests.swift */,
 			);
 			path = AppcentNewsAppServiceTests;
 			sourceTree = "<group>";
@@ -401,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D9EF95284CEF7900A65B27 /* article.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D9EF8D284CEF3E00A65B27 /* ParsingTests.swift in Sources */,
 				C0E53649284BF13700E93762 /* AppcentNewsAppServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

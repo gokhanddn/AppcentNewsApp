@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0D9EF98284CF04F00A65B27 /* Optional+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9EF97284CF04F00A65B27 /* Optional+Helpers.swift */; };
 		C0E535BC284BEB2500E93762 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E535B3284BEB2500E93762 /* Core.framework */; };
 		C0E535C1284BEB2500E93762 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E535C0284BEB2500E93762 /* CoreTests.swift */; };
 		C0E535C2284BEB2500E93762 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E535B6284BEB2500E93762 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0D9EF97284CF04F00A65B27 /* Optional+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Helpers.swift"; sourceTree = "<group>"; };
 		C0E535B3284BEB2500E93762 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E535B6284BEB2500E93762 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		C0E535BB284BEB2500E93762 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0D9EF96284CF03A00A65B27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0D9EF97284CF04F00A65B27 /* Optional+Helpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C0E535A9284BEB2500E93762 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E535B6284BEB2500E93762 /* Core.h */,
+				C0D9EF96284CF03A00A65B27 /* Extensions */,
 				C0E535D4284BEB4900E93762 /* Enums */,
 				C0E535D7284BEB6E00E93762 /* TypeAliases */,
 			);
@@ -214,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D9EF98284CF04F00A65B27 /* Optional+Helpers.swift in Sources */,
 				C0E535D6284BEB5F00E93762 /* Result.swift in Sources */,
 				C0E535D9284BEB8F00E93762 /* General+TypeAliases.swift in Sources */,
 			);
