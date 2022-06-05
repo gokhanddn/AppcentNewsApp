@@ -14,9 +14,12 @@ protocol ArticleDetailViewModelDelegate: AnyObject {
 enum ArticleDetailViewModelOutput: Equatable {
     case updateTitle(String)
     case showArticleDetail(ArticleDetailPresentation)
+    case updatedFavorite(Bool)
 }
 
 protocol ArticleDetailViewModelProtocol {
     var delegate: ArticleDetailViewModelDelegate? { get set }
     func load()
+    func addOrRemoveFavorite()
+    func isFavorite() -> Bool
 }

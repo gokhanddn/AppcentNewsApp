@@ -165,6 +165,9 @@
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="heart" catalog="system"/>
+                                                <connections>
+                                                    <action selector="buttonFavoriteAction:" destination="DZv-wC-NsN" eventType="touchUpInside" id="yQ9-Tp-W8A"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-5E-ZD4">
                                                 <rect key="frame" x="40" y="5.5" width="32" height="32"/>
@@ -226,6 +229,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonFavorite" destination="abp-Ht-p38" id="8SN-kG-WOF"/>
                         <outlet property="imageViewNews" destination="f7J-JD-rOH" id="8l7-Fl-vLI"/>
                         <outlet property="labelAuthor" destination="GwW-9v-0JP" id="N40-DA-Hyg"/>
                         <outlet property="labelContent" destination="IpE-Ow-q6B" id="kBH-ok-25u"/>
