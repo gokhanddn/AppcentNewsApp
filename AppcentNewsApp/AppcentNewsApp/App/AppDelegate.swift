@@ -7,15 +7,18 @@
 
 import UIKit
 import CoreData
+import Firebase
 import FirebaseCore
-import FirebaseRemoteConfig
+import FirebaseMessaging
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         initRemoteConfig()
+        initAPNS(with: application)
         return true
     }
 
@@ -53,6 +56,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else {
                 print("An error occured")
             }
+        }
+    }
+    
+    private func initAPNS(with application: UIApplication) {
+        Messaging.messaging().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { isSuccess, _ in
+            guard isSuccess else { return }
+            print("APNS is successful")
+        }
+        
+        application.registerForRemoteNotifications()
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token, _ in
+            guard let token = token else { return }
+            print("Token -> \(token)")
         }
     }
     

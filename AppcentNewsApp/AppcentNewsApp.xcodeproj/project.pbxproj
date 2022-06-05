@@ -169,6 +169,7 @@
 		C0A16B8E284CD77B0045D0A8 /* ArticleSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSourceView.swift; sourceTree = "<group>"; };
 		C0A16B90284CD7900045D0A8 /* ArticleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebView.swift; sourceTree = "<group>"; };
 		C0A16B9B284CDE140045D0A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0A16B9D284CE3A10045D0A8 /* AppcentNewsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppcentNewsApp.entitlements; sourceTree = "<group>"; };
 		C0E53693284BF5CD00E93762 /* AppcentNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppcentNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E53696284BF5CD00E93762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E53698284BF5CD00E93762 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +314,7 @@
 		C0E53695284BF5CD00E93762 /* AppcentNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C0A16B9D284CE3A10045D0A8 /* AppcentNewsApp.entitlements */,
 				C0E536F3284BFEA200E93762 /* App */,
 				C0E536F8284BFF0C00E93762 /* Scenes */,
 				C0A16B67284C90D10045D0A8 /* Models */,
@@ -977,6 +979,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppcentNewsApp/AppcentNewsApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3WPTWPU2W5;
@@ -1004,6 +1007,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppcentNewsApp/AppcentNewsApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3WPTWPU2W5;
