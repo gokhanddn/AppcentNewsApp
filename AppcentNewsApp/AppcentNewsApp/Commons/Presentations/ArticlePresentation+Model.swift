@@ -10,11 +10,17 @@ import struct AppcentNewsAppModel.ArticleModel
 
 extension ArticlePresentation {
     
-    convenience init(newsModel: ArticleModel) {
+    convenience init(articleModel: ArticleModel) {
         self.init(
-            title: newsModel.title ?? String(),
-            desc: newsModel.description ?? String(),
-            imageUrl: newsModel.urlToImage ?? String()
+            title: articleModel.title ?? String(),
+            desc: articleModel.description ?? String(),
+            imageUrl: articleModel.urlToImage ?? String()
         )
+    }
+    
+    convenience init(favoriteArticleModel: FavoriteArticle) {
+        self.init(title: favoriteArticleModel.title ?? String(),
+                  desc: favoriteArticleModel.desc ?? String(),
+                  imageUrl: favoriteArticleModel.imageUrl ?? String())
     }
 }

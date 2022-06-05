@@ -19,6 +19,10 @@ final class Util {
         formatterReadable.locale = locReadable
         formatterReadable.dateStyle = style
         
-        return formatterReadable.string(from: dateFormatter.date(from:strDate)!)
+        if let date = dateFormatter.date(from:strDate) {
+            return formatterReadable.string(from: date)
+        }
+        
+        return String()
     }
 }

@@ -51,7 +51,7 @@ final class ArticleListViewModel: ArticleListViewModelProtocol {
                 self.totalResult = self.articleList.count
             }
             
-            let presenatations = self.articleList.map({ ArticlePresentation(newsModel: $0) })
+            let presenatations = self.articleList.map({ ArticlePresentation(articleModel: $0) })
             self.notify(.showArticleList(presenatations))
         }
     }

@@ -31,7 +31,6 @@ final class ArticleListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
     }
     
     // MARK: - Setup & Initializers

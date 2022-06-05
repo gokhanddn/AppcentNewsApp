@@ -21,4 +21,16 @@ extension ArticleDetailPresentation {
                   imageUrl: articleModel.urlToImage ?? String(),
                   publishedDate: Util.getReadableDate(strDate: articleModel.publishedAt ?? String()))
     }
+    
+    convenience init(favoriteArticleModel: FavoriteArticle) {
+        self.init(sourceId: favoriteArticleModel.sourceId ?? String(),
+                  sourceName: String(),
+                  author: favoriteArticleModel.author ?? String(),
+                  title: favoriteArticleModel.title ?? String(),
+                  desc: favoriteArticleModel.desc ?? String(),
+                  sourceUrl: favoriteArticleModel.sourceUrl ?? String(),
+                  content: favoriteArticleModel.content ?? String(),
+                  imageUrl: favoriteArticleModel.imageUrl ?? String(),
+                  publishedDate: favoriteArticleModel.publishedDate ?? String())
+    }
 }

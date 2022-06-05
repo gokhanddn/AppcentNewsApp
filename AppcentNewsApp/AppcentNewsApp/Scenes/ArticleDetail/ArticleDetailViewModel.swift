@@ -61,6 +61,7 @@ final class ArticleDetailViewModel: ArticleDetailViewModelProtocol {
         favoriteArticle.content = article.content
         favoriteArticle.imageUrl = article.imageUrl
         favoriteArticle.publishedDate = article.publishedDate
+        favoriteArticle.author = article.author
         
         saveContext()
     }
