@@ -60,6 +60,8 @@ final class ArticleDetailViewController: BaseViewController {
     private func updateUI(_ presentation: ArticleDetailPresentation) {
         articleDetail = presentation
         
+        LogEventManager.shared.logEvent(name: Constants.AnalyticsEventName.articleDetail, params: ["title": articleDetail?.title ?? String()])
+        
         labelTitle.text = presentation.title
         labelAuthor.text = presentation.author
         labelDate.text = presentation.publishedDate

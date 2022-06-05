@@ -73,6 +73,7 @@ final class ArticleListViewController: BaseViewController {
     }
     
     private func loadArticles() {
+        LogEventManager.shared.logEvent(name: Constants.AnalyticsEventName.searchedText, params: ["text": currentSearchText, "currentPage": currentPage])
         viewModel?.load(with: currentSearchText, in: currentPage)
     }
     

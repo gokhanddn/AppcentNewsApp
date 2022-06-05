@@ -26,4 +26,10 @@ final class Constants {
         static let query = "q"
         static let page = "page"
     }
+    
+    // MARK: - ParameterKeys
+    struct AnalyticsEventName {
+        static let searchedText = "searched_text"
+        static let articleDetail = "article_detail"
+    }
 }
