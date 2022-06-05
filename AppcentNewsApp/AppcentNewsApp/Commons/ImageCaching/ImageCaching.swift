@@ -25,7 +25,7 @@ extension UIImageView: ImageCaching {}
 
 extension ImageCaching where Self: UIImageView {
     
-    typealias SuccessCompletion = (Bool) -> ()
+    typealias SuccessCompletion = (Bool) -> Void
     func image(from URLString: String, placeHolder: UIImage?) {
         
         self.image = nil

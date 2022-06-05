@@ -24,8 +24,8 @@ final class BaseTabBarViewController: UITabBarController {
     
     func initViewControllers() {
         viewControllers = [
-            createNavController(for: ArticleBuilder.make(), title: LanguageManager.shared.news, image: UIImage(systemName: "newspaper")!),
-            createNavController(for: FavoriteListBuilder.make(), title: LanguageManager.shared.favorites, image: UIImage(systemName: "heart")!)
+            createNavController(for: ArticleBuilder.make() ?? UIViewController(), title: LanguageManager.shared.news, image: UIImage(systemName: "newspaper")!),
+            createNavController(for: FavoriteListBuilder.make() ?? UIViewController(), title: LanguageManager.shared.favorites, image: UIImage(systemName: "heart")!)
         ]
     }
     
@@ -47,9 +47,7 @@ final class BaseTabBarViewController: UITabBarController {
         tabBar.layer.shadowOpacity = 0.3
     }
     
-    private func createNavController(for rootViewController: UIViewController,
-                                                      title: String,
-                                                      image: UIImage) -> UIViewController {
+    private func createNavController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image

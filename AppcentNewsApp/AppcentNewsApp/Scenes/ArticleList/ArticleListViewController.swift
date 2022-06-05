@@ -111,8 +111,9 @@ extension ArticleListViewController: ArticleListViewModelDelegate {
     func navigate(to route: ArticleListViewRoute) {
         switch route {
         case .detail(let articleModel):
-            let viewController = ArticleDetailBuilder.make(with: articleModel)
-            navigationController?.pushViewController(viewController, animated: true)
+            if let viewController = ArticleDetailBuilder.make(with: articleModel) {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
         }
     }
 }
@@ -124,9 +125,9 @@ extension ArticleListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifiers.articleCell, for: indexPath) as! ArticleCell
-        cell.article = articleList[indexPath.row]
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifiers.articleCell, for: indexPath) as? ArticleCell
+        cell?.article = articleList[indexPath.row]
+        return cell ?? UITableViewCell()
     }
 }
 
@@ -138,11 +139,11 @@ extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if viewModel?.isLoadingMoreVisible() ?? false {
-            let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.ReuseIdentifiers.loadingMore) as! LoadingMoreFooterView
-            footerView.activityIndicator.startAnimating()
-            footerView.buttonLoadMore.setTitle(LanguageManager.shared.loadMore, for: .normal)
-            footerView.buttonLoadMore.isHidden = false
-            footerView.buttonLoadMore.addTarget(self, action: #selector(loadMoreTapped(sender:)), for: .touchUpInside)
+            let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.ReuseIdentifiers.loadingMore) as? LoadingMoreFooterView
+            footerView?.activityIndicator.startAnimating()
+            footerView?.buttonLoadMore.setTitle(LanguageManager.shared.loadMore, for: .normal)
+            footerView?.buttonLoadMore.isHidden = false
+            footerView?.buttonLoadMore.addTarget(self, action: #selector(loadMoreTapped(sender:)), for: .touchUpInside)
             return footerView
         }
         return nil

@@ -11,8 +11,8 @@ final class Constants {
     
     // MARK: - Keys
     struct Keys {
-        static let englishLocalization = "en";
-        static let turkishLocalization = "tr";
+        static let englishLocalization = "en"
+        static let turkishLocalization = "tr"
     }
     
     // MARK: - ReuseIdentifiers

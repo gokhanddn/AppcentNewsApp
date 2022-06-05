@@ -12,10 +12,10 @@ final class ArticleDetailBuilder {
     private static let storyboardName: String = "ArticleDetail"
     private static let controllerName: String = "ArticleDetailViewController"
     
-    static func make(with article: ArticleDetailPresentation) -> ArticleDetailViewController {
+    static func make(with article: ArticleDetailPresentation) -> ArticleDetailViewController? {
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: controllerName) as! ArticleDetailViewController
-        viewController.viewModel = ArticleDetailViewModel(article: article)
+        let viewController = storyboard.instantiateViewController(withIdentifier: controllerName) as? ArticleDetailViewController
+        viewController?.viewModel = ArticleDetailViewModel(article: article)
         return viewController
     }
 }

@@ -566,6 +566,7 @@
 				C0E53691284BF5CD00E93762 /* Resources */,
 				C0E536EB284BFD2F00E93762 /* Embed Frameworks */,
 				C0A16B9E284CE5A80045D0A8 /* Crashlytics Run Script */,
+				C0D9EF99284CF20900A65B27 /* Swiflint Run Script */,
 			);
 			buildRules = (
 			);
@@ -788,6 +789,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\n";
+		};
+		C0D9EF99284CF20900A65B27 /* Swiflint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiflint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

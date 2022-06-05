@@ -27,13 +27,15 @@ final class ArticleDetailViewModel: ArticleDetailViewModelProtocol {
     
     func addOrRemoveFavorite() {
         do {
-            let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
-            let favorite = favoriteArticleList.filter { $0.sourceUrl == article.sourceUrl }
-            
-            if favorite.count > 0 {
-                removeFromFavorites(article: favorite[0])
-            } else {
-                addToFavorites()
+            if let context = context {
+                let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
+                let favorite = favoriteArticleList.filter { $0.sourceUrl == article.sourceUrl }
+                
+                if !favorite.isEmpty {
+                    removeFromFavorites(article: favorite[0])
+                } else {
+                    addToFavorites()
+                }
             }
         }
         catch {
@@ -43,8 +45,11 @@ final class ArticleDetailViewModel: ArticleDetailViewModelProtocol {
     
     func isFavorite() -> Bool {
         do {
-            let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
-            return favoriteArticleList.filter { $0.sourceUrl == article.sourceUrl }.count > 0
+            if let context = context {
+                let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
+                return !favoriteArticleList.filter { $0.sourceUrl == article.sourceUrl }.isEmpty
+            }
+            return false
         }
         catch {
             return false
@@ -57,27 +62,29 @@ final class ArticleDetailViewModel: ArticleDetailViewModelProtocol {
     
     // MARK: Private Methods
     private func addToFavorites() {
-        let favoriteArticle = FavoriteArticle(context: context)
-        favoriteArticle.sourceId = article.sourceId
-        favoriteArticle.sourceUrl = article.sourceUrl
-        favoriteArticle.title = article.title
-        favoriteArticle.desc = article.desc
-        favoriteArticle.content = article.content
-        favoriteArticle.imageUrl = article.imageUrl
-        favoriteArticle.publishedDate = article.publishedDate
-        favoriteArticle.author = article.author
-        
-        saveContext()
+        if let context = context {
+            let favoriteArticle = FavoriteArticle(context: context)
+            favoriteArticle.sourceId = article.sourceId
+            favoriteArticle.sourceUrl = article.sourceUrl
+            favoriteArticle.title = article.title
+            favoriteArticle.desc = article.desc
+            favoriteArticle.content = article.content
+            favoriteArticle.imageUrl = article.imageUrl
+            favoriteArticle.publishedDate = article.publishedDate
+            favoriteArticle.author = article.author
+            
+            saveContext()
+        }
     }
     
     private func removeFromFavorites(article: FavoriteArticle) {
-        context.delete(article)
+        context?.delete(article)
         saveContext()
     }
     
     private func saveContext() {
-        do{
-            try context.save()
+        do {
+            try context?.save()
             notify(.updatedFavorite(true))
         }
         catch {

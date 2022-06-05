@@ -73,8 +73,9 @@ extension FavoriteListViewController: FavoriteListViewModelDelegate {
     func navigate(to route: FavoriteListViewRoute) {
         switch route {
         case .detail(let articleModel):
-            let viewController = ArticleDetailBuilder.make(with: articleModel)
-            navigationController?.pushViewController(viewController, animated: true)
+            if let viewController = ArticleDetailBuilder.make(with: articleModel) {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
         }
     }
 }
@@ -85,9 +86,9 @@ extension FavoriteListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifiers.articleCell, for: indexPath) as! ArticleCell
-        cell.article = articleList[indexPath.row]
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.ReuseIdentifiers.articleCell, for: indexPath) as? ArticleCell
+        cell?.article = articleList[indexPath.row]
+        return cell ?? UITableViewCell()
     }
 }
 

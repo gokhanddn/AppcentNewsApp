@@ -9,7 +9,7 @@ import UIKit
 import AppcentNewsAppService
 
 let app = AppContainer()
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
 final class AppContainer {
     

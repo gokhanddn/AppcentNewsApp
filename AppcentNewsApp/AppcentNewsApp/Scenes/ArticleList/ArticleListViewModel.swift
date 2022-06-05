@@ -62,7 +62,7 @@ final class ArticleListViewModel: ArticleListViewModelProtocol {
     }
     
     func isLoadingMoreVisible() -> Bool {
-        return articleList.count != 0 && articleList.count < totalResult
+        return articleList.isEmpty && articleList.count < totalResult
     }
     
     // MARK: Private Methods

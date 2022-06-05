@@ -19,10 +19,14 @@ final class FavoriteListViewModel: FavoriteListViewModelProtocol {
     func load() {
         notify(.updateTitle(LanguageManager.shared.favorites))
         do {
-            let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
-            articleList = favoriteArticleList
-            
-            notify(.showArticleList(articleList.map { ArticlePresentation(favoriteArticleModel: $0) }))
+            if let context = context {
+                let favoriteArticleList: [FavoriteArticle] = try context.fetch(FavoriteArticle.fetchRequest())
+                articleList = favoriteArticleList
+                
+                notify(.showArticleList(articleList.map { ArticlePresentation(favoriteArticleModel: $0) }))
+                return
+            }
+            notify(.showArticleList([]))
         }
         catch {
             notify(.showArticleList([]))
